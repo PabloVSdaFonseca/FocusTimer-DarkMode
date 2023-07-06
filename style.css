@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* light */
+  --clock:#323238;
+  --bg-color: #FFFFFF;
+  --secondary-color: #FFFFFF;
+  --primary-color: #323238;
+  --bg-cards: #E1E1E6;
+  --bg-cards-selected: #02799D;
+}
+
+.darkMode {
+  --bg-color: #121214;
+  --clock :#FFFFFF;
+  --primary-color: #C4C4CC;
+  --bg-cards: #29292E;
+  --bg-cards-selected: #0A3442;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg-color);
+}
+
+.hide {
+  display: none;
+}
+
+.switch {
+  position: absolute;
+  right: 6rem;
+  top: 6rem;
+}
+
+.switch button {
+  background-color: var(--bg-color);
+  border: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  gap: 19.2rem;
+}
+
+
+.clock {
+  width: 32.1rem;
+  height: 21.3rem;  
+  color: var(--clock);
+}
+
+.timer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.controls button {
+  background-color: var(--bg-color);
+  border: none;
+}
+
+.controls svg path {
+  fill: var(--primary-color);
+}
+
+.cards {
+  display: grid;
+  grid-template-areas: "A B" "C D";
+  gap: 3.2rem;
+}
+
+.cards svg path {
+  fill: var(--primary-color);
+}
+
+.card {
+  border: none;
+  border-radius: 2.4rem;
+  background-color: var(--bg-cards);
+  width: 13.8rem;
+  height: 15.2rem;
+}
+
+.selected {
+  background-color: var(--bg-cards-selected);
+}
+
+.selected svg path {
+  fill: var(--secondary-color);
+}
+
+.cards button input {
+  margin-top: 3.2rem;
+  width: 9rem;
+  height: .4rem;
+  cursor: pointer;
+  
+}
+
+button input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -5px;
+  background: var(--primary-color);
+}
+
+button input::-webkit-slider-runnable-track {
+  background: var(--primary-color);
+  border-radius: 5rem;
+  height: 0.5rem;
+}
+
+/*
+.volume-control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 5rem;
+  background: var(--text-color);
+  margin-top: -5px;
+}
+
+.volume-control::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  background: var(--text-color);
+  border-radius: 5rem;
+}
+
+
+.volume-control {
+  margin-top: 3.2rem;
+  width: 9rem;
+  height: .4rem;
+  cursor: pointer;
+  appearance: none;
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+}
