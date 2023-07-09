@@ -98,6 +98,14 @@ main {
   height: 15.2rem;
 }
 
+.selected input[type='range'] {
+  background: #FFFFFF;
+}
+
+.selected input[type='range']::-webkit-slider-thumb {
+  background: #FFFFFF;
+}
+
 .selected {
   background-color: var(--bg-cards-selected);
 }
@@ -106,50 +114,20 @@ main {
   fill: var(--secondary-color);
 }
 
-.cards button input {
-  margin-top: 3.2rem;
-  width: 9rem;
-  height: .4rem;
-  cursor: pointer;
-  
-}
-
-button input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  margin-top: -5px;
-  background: var(--primary-color);
-}
-
-button input::-webkit-slider-runnable-track {
-  background: var(--primary-color);
+input[type='range'] { 
+  -webkit-appearance: none; /* Propriedade que reseta o visual web padrão do slider */
+  background: var(--clock);
   border-radius: 5rem;
-  height: 0.5rem;
+  width: 9rem;
+  height: 0.4rem;
+  margin-top: 3.2rem;
+  cursor: pointer;
 }
 
-/*
-.volume-control::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 1.6rem;
+input[type='range']::-webkit-slider-thumb { 
+  -webkit-appearance: none; /* Propriedade que reseta o visual web padrão da bolinha do slider */
+  background: var(--clock);
   width: 1.6rem;
+  height: 1.6rem;
   border-radius: 5rem;
-  background: var(--text-color);
-  margin-top: -5px;
-}
-
-.volume-control::-webkit-slider-runnable-track {
-  height: 0.5rem;
-  background: var(--text-color);
-  border-radius: 5rem;
-}
-
-
-.volume-control {
-  margin-top: 3.2rem;
-  width: 9rem;
-  height: .4rem;
-  cursor: pointer;
-  appearance: none;
-  background-color: var(--primary-color);
-  color: var(--primary-color);
 }

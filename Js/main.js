@@ -91,6 +91,7 @@ buttonMinus.addEventListener('click', () => {
 });
 
 /* -- Cards -- */
+
 function resetCards() {
   cardForest.classList.remove('selected');
   cardRain.classList.remove('selected');
@@ -99,6 +100,10 @@ function resetCards() {
 };
 
 cardForest.addEventListener('click', () => {
+  volForest.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+
   sound.soundsOff();
   sound.soundForest.play();
   let cardSelected = cardForest.classList.contains('selected');
@@ -113,6 +118,10 @@ cardForest.addEventListener('click', () => {
 });
 
 cardRain.addEventListener('click', () => {
+  volRain.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+
   sound.soundsOff();
   sound.soundRain.play();
   let cardSelected = cardRain.classList.contains('selected');
@@ -127,6 +136,10 @@ cardRain.addEventListener('click', () => {
 });
 
 cardCoffeeShop.addEventListener('click', () => {
+  volStore.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+
   sound.soundsOff();
   sound.soundCoffeeShop.play();
   let cardSelected = cardCoffeeShop.classList.contains('selected');
@@ -141,6 +154,10 @@ cardCoffeeShop.addEventListener('click', () => {
 });
 
 cardFire.addEventListener('click', () => {
+  volFire.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+
   sound.soundsOff();
   sound.soundFire.play();
   let cardSelected = cardFire.classList.contains('selected');
@@ -154,11 +171,13 @@ cardFire.addEventListener('click', () => {
   };
 });
 
+/* -- Modes change -- */
+
 buttonLight.addEventListener('click', () => {
   buttonDark.classList.remove('hide');
   buttonLight.classList.add('hide');
   body.classList.add('darkMode');
-})
+});
 
 buttonDark.addEventListener('click', function() {
   buttonLight.classList.remove('hide');
